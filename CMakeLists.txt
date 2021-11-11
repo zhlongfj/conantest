@@ -1,7 +1,8 @@
 project(conatest LANGUAGES CXX)
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.19)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+add_definitions("-std=c++17")
+include(${PROJECT_SOURCE_DIR}/build/conanbuildinfo.cmake)
 conan_basic_setup()
 
 add_executable(conatest main.cpp)

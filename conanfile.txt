@@ -1,12 +1,17 @@
 [requires]
-fmt/8.0.1
+nlohmann_json/3.9.0
+fmt/8.0.0
+spdlog/1.8.5
 
 [generators]
 cmake
 
 [options]
-fmt:shared=True
+#fmt:shared=True
+fmt:header_only=True
+spdlog:header_only=True
 
 [imports]
 bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my local "bin" folder
 lib, *.dylib* -> ./bin # Copies all dylib files from packages lib folder to my local "bin" folder
+build, conanbuildinfo.cmake -> ./bin

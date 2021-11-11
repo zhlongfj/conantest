@@ -1,0 +1,12 @@
+[requires]
+fmt/8.0.1
+
+[generators]
+cmake
+
+[options]
+fmt:shared=True
+
+[imports]
+bin, *.dll -> ./bin # Copies all dll files from packages bin folder to my local "bin" folder
+lib, *.dylib* -> ./bin # Copies all dylib files from packages lib folder to my local "bin" folder
